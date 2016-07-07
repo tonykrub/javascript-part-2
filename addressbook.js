@@ -16,7 +16,7 @@
 //  * Finally test your code by creating a person and giving them a home and work email.    
 
 
-function Person (firstName, lastName){
+function Person (firstName, lastName){ // we use constructor function when there are many sets of data, or basically when there are many "objects" and different properties in each object
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = [];
@@ -36,7 +36,7 @@ function Email (address, type){
 }
 
 Person.prototype = {
-    addEmail: function(email, type){
+    addEmail: function(email, type){  // this is function in an object. so always use ':'
         this.email.push(new Email(email, type))
     }
 }
@@ -46,4 +46,3 @@ var clara = new Person("Clara", "Smith");
 
 amy.addEmail('amywhite@gmail.com', 'work');
 console.log(amy);
-console.log(clara);
