@@ -3,7 +3,37 @@ function that can be used with sort. This function should take
 two strings, and return a value that sort can use to determine 
 which is the longest string. Finally, create an array of strings 
 and try to get it sorted using your new function.*/
-function longestStr(str1, str2) {
+
+// var arr = ['hi', 'a'];
+// console.log(arr.sort(function compare(str1, str2) {
+//     if (str1.length > str2.length) {
+//         return 1;
+//     } 
+//     else if (str1.length < str2.length) {
+//         return -1;
+//     }
+//     else {
+//         return 0;
+//     }
+// }));
+
+// or 
+function compare(str1, str2) {
+    if (str1.length > str2.length) {
+        return 1;
+    } 
+    else if (str1.length < str2.length) {
+        return -1;
+    }
+    else {
+        return 0;
+    }
+}
+var arr = ['Tony', 'Varut'];
+//(console.log(arr.sort(compare)));
+
+// or
+function longestStr(str1, str2) {  
     if (str1.length < str2.length) {
         return -1;
     }
@@ -71,6 +101,7 @@ function sortedByAlphabet(a, b) {
 Array.prototype.map.This function should take a number and 
 return its square. Then, use this function with map on an 
 array of numbers to check the result.*/
+
 function sqr(num) {
     return num * num;
 }
@@ -84,8 +115,10 @@ Array.prototype.map. This function should be able to take an
 object and square its “num” property. Then, use this function
 with map on an array of objects each containming a “num” 
 property.*/
-function sqrNum(arr) {
-    return arr.num * arr.num;
+
+
+function sqrNum(obj) {
+    return obj.num * obj.num; // need to make a loop here too.
 }
 
 var arr = [
